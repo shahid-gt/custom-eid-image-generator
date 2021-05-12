@@ -1,0 +1,302 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom eid image generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@800&family=Reggae+One&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/eid.css" />
+
+</head>
+
+<body>
+
+    <div style="background: url(img/banner.jpg)" class="jumbotron bg-cover text-white p-0">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 font-weight-bold">Custom Eid Image Generator</h1>
+            <p class="font-italic mb-0" style="border: 1px solid black;border-radius:5px;background-color:black">( CEIG ) - by <b style="color: red;font-size:20px;">SHAHID SHAIKH</b></p>
+            <small style="color: black;">name -> quote -> image -> download</small>
+        </div>
+    </div>
+    <div class="ContainerDiv">
+         <div id="includeheader">
+            <div class="ProgressBar">
+                <div id="stepWrapper">
+                    <div class="Step">
+                        <div class="Bullet" id="bullet1">&nbsp;1&nbsp;</div>
+                    </div>
+
+                    <div class="Step">
+                        <div class="Bullet" id="bullet2">&nbsp;2&nbsp;</div>
+                    </div>
+                    <div class="Step">
+                        <div class="Bullet" id="bullet3">&nbsp;3&nbsp;</div>
+                    </div>
+                    <div class="Step">
+                        <div class="Bullet" id="bullet4">&nbsp;4&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main" id="first">
+            <input class="input100" placeholder="Enter Name/Company name" type="text" id="name" onkeyup="btnEnable(this)"/>
+        </div>
+        
+        <div class="overflowRadio" id="second">
+            <h3 style="text-align: center;">choose Quote : </h3>
+            <div class="quotes">
+                <input type="radio" name="para" value="1" onclick="radioNext(this)" />
+                <span class="para1"  id="11">May Allah (SWT) shower countless</span>
+                <span class="para1"  id="12">blessings on you,</span>
+                <span class="para1"  id="13">because you deserve all of them.</span>
+                <span class="para1"  id="14">Wish you a very joyous eid.</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="2" onclick="radioNext(this)" />
+                <span class="para2"  id="11">आई तुम न आए क्या मजा है ईद का,</span>
+                <span class="para2"  id="12">ईद ही तो नाम है इक दूसरे की दीद का!,</span>
+                <span class="para2"  id="13">     EID MUBARAK.</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="3" onclick="radioNext(this)" />
+                <span class="para3"  id="11">May Allah place mercy upon all</span>
+                <span class="para3"  id="12">the Muslims all around the world</span>
+                <span class="para3"  id="13">on this happy occasion of Eid!</span>
+                <span class="para3"  id="14">Eid Mubarak to everyone celebrating!</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="4" onclick="radioNext(this)" />
+                <span id="11" class="para4">May this beautiful</span>
+                <span id="12" class="para4">occassion of eid gives you</span>
+                <span class="para4" id="13">all the reasons to make</span>
+                <span class="para4" id="14">your life even more beautiful.</span> 
+                <span class="para4" id="15">Wishing a happy Eid day!</span>
+            </div>
+            
+            <div class="quotes">
+                <input type="radio" name="para" value="5" onclick="radioNext(this)" />
+                <span class="para5"  id="11">सदा हँसते रहो जैसे हँसते हैं फूल,</span>
+                <span class="para5"  id="12">दुनिया के सारे गम तुम जाओ भूल,</span>
+                <span class="para5"  id="13">चारों तरफ फ़ैलाओ खुशियों के गीत,</span>
+                <span class="para5"  id="14">इसी उम्मीद के साथ तुम्हें मुबारक हो ईद!</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="6" onclick="radioNext(this)" />
+                <span class="para6"  id="11">Every day is Eid for me,</span>
+                <span class="para6"  id="12">when I’m with you,</span>
+                <span class="para6"  id="13">Sending lots of love to this Eid,</span>
+                <span class="para6"  id="14">     EID MUBARAK.</span>
+            </div>
+            <!--            <div class="quotes">
+                <input type="radio" name="para" value="2" onclick="radioNext(this)" />
+                <span class="para2"  id="11">,</span>
+                <span class="para2"  id="12">,</span>
+                <span class="para2"  id="13">,</span>
+                <span class="para2"  id="14">,</span>
+            </div>-->
+
+            <div class="quotes">
+                <input type="radio" name="para" value="7" onclick="radioNext(this)" />
+                <span class="para7"  id="11">आज से अमीर गरीब के फैसले ना रहे,,</span>
+                <span class="para7"  id="12">हर इंसान एक दूजे को अपना भाई कहें,,</span>
+                <span class="para7"  id="13">आज सब कुछ भूल के आ गले लग जा,,</span>
+                <span class="para7"  id="14">मुबारक हो तुझे यह ईद-उल फितर!,</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="8" onclick="radioNext(this)" />
+                <span class="para8"  id="11">Wish you all a very happy,</span>
+                <span class="para8"  id="12">and peaceful eid,</span>
+                <span class="para8"  id="13">     EID MUBARAK.</span>
+            </div>
+            
+            <div class="quotes">
+                <input type="radio" name="para" value="9" onclick="radioNext(this)" />
+                <span class="para9"  id="11">Eid Mubarak to you and your family! ,</span>
+                <span class="para9"  id="12">May this Eid brings nothing,</span>
+                <span class="para9"  id="13">but joy and peace for all,</span>
+                <span class="para9"  id="14">Have a safe and happy Eid day!</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="10" onclick="radioNext(this)" />
+                <span class="para10"  id="11">जिंदगी का हर पल खुशियों से कम न हो,</span>
+                <span class="para10"  id="12">आप का हर दिन ईद के दिन से कम न हो,</span>
+                <span class="para10"  id="13">ऐसा ईद का दिन आपको हमेशा नसीब हो,</span>
+                <span class="para10"  id="14">जिसमे कोई दुःख और गम न हो,</span>
+                <span class="para10"  id="14">आपको और आपके परिवार को ईद मुबारक .</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="11" onclick="radioNext(this)" />
+                <span class="para11"  id="11">May Allah bring happiness,</span>
+                <span class="para11"  id="12">to your life this Eid,</span>
+                <span class="para11"  id="13">     EID MUBARAK.</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="12" onclick="radioNext(this)" />
+                <span class="para12"  id="11">समुद्र को उसका किनारा मुबारक,</span>
+                <span class="para12"  id="12">चांद को सितारा मुबारक,</span>
+                <span class="para12"  id="13">फूलों को उसकी खुशबू मुबारक,</span>
+                <span class="para12"  id="14">आपको और आपके परिवार,</span>
+                <span class="para12"  id="14">को ईद का त्योहार मुबारक.</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="13" onclick="radioNext(this)" />
+                <span class="para13"  id="11">May the ecstasy of this eid be,</span>
+                <span class="para13"  id="12">multiplied a million times and stay,</span>
+                <span class="para13"  id="13">with you and your family forever,</span>
+                <span class="para13"  id="14">     EID MUBARAK.</span>
+            </div>
+            <div class="quotes">
+                <input type="radio" name="para" value="14" onclick="radioNext(this)" />
+                <span class="para14"  id="11">सभी गम भुलाओं गाओ खुशियों के गीत,</span>
+                <span class="para14"  id="12">यही पैगाम लेकर आई है ईद, ईद मुबारक़.</span>
+            </div>
+        img/
+        </div>
+        
+        <div class="third overflowradio" id="third">
+            <h3 style="text-align: center;">choose image : </h3>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio1" onclick="radioNext(this)">
+                <img src="img/hq1.jpg" id="radio1" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio2" onclick="radioNext(this)">
+                <img src="img/hq2.jpg" id="radio2" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio3" onclick="radioNext(this)">
+                <img src="img/hq3.jpg" id="radio3" width="960" height="640" />
+            </div>
+            
+            <div class="quotes">
+                <input type="radio" name="img" value="radio4" onclick="radioNext(this)">
+                <img src="img/hq4.jpg" id="radio4" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio5" onclick="radioNext(this)">
+                <img src="img/hq5.jpg" id="radio5" width="960" height="640" />
+            </div>
+            
+            <div class="quotes">
+                <input type="radio" name="img" value="radio6" onclick="radioNext(this)">
+                <img src="img/hq6.jpg" id="radio6" width="960" height="640" />
+            </div>
+            
+            <div class="quotes">
+                <input type="radio" name="img" value="radio7" onclick="radioNext(this)">
+                <img src="img/hq7.jpg" id="radio7" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio8" onclick="radioNext(this)">
+                <img src="img/hq8.jpg" id="radio8" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio9" onclick="radioNext(this)">
+                <img src="img/hq9.jpg" id="radio9" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio10" onclick="radioNext(this)">
+                <img src="img/hq10.jpg" id="radio10" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio11" onclick="radioNext(this)">
+                <img src="img/hq11.jpg" id="radio11" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio12" onclick="radioNext(this)">
+                <img src="img/hq12.jpg" id="radio12" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio13" onclick="radioNext(this)">
+                <img src="img/hq13.jpg" id="radio13" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio14" onclick="radioNext(this)">
+                <img src="img/hq14.jpg" id="radio14" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio15" onclick="radioNext(this)">
+                <img src="img/hq15.jpg" id="radio15" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio16" onclick="radioNext(this)">
+                <img src="img/hq16.jpg" id="radio16" width="960" height="640" />
+            </div>
+            <div class="quotes">
+                <input type="radio" name="img" value="radio17" onclick="radioNext(this)">
+                <img src="img/hq17.jpg" id="radio17" width="960" height="640" />
+            </div>
+        </div>
+
+        <p class="fourth" id="fourth">
+            <canvas id="myCanvas">
+        </p>
+
+       
+    
+        <div class="buttonDiv" id="buttonDiv">
+            <button class="btn btn-success cusbtn" type="button" id="reloadButton" onclick="location.reload();" >
+                Regenerate
+            </button>    
+            <button class="btn btn-success cusbtn" type="button" id="nextButton" onclick="stepChange();disAll()" disabled="disabled">
+                Next
+            </button>
+            <i class="fas fa-angle-double-right"></i>
+        </div>
+      <div class="btnDown" id="btnDown">
+        <button class="btn btn-success cusbtn" type="button" id="reloadButton" onclick="location.reload();" >
+            Regenerate
+        </button>
+            <button class="btn btn-success cusbtn" type="button" id="downloadButton" onclick="enableDownload()">Download</button>
+            <i class="fas fa-download"></i>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h4>Connect with me</h4>
+            <div class="content">
+              <p>This website is created for generating custom greeting image by preferences of user name , quotes , images .</p>
+              <div class="social">
+                <a href="#"><span class="fas fa-mail-bulk"></span></a>
+                <span>shahidshaikh9286@gmail.com</span><br/>
+                <a href="https://www.linkedin.com/in/shahid-shaikh-46a88b176" target="_blank"><span class="fab fa-linkedin"></span></a>
+                <span>shahid shaikh</span><br/>
+                <a href="https://github.com/shahid-gt" target="_blank"><span class="fab fa-github"></span></a>
+                <span>shahid-gt</span>
+              </div>
+            </div>
+          </div>
+   
+         
+   
+        </div>
+        <div class="bottom">
+          <center>
+            <span class="credit">Created By Shahid Shaikh</a> | </span>
+            <span class="far fa-copyright"></span><span> 2021-2022 All rights reserved.</span>
+          </center>
+        </div>
+      </footer>
+
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="js/eid.js"></script>
+</body>
+
+</html>
