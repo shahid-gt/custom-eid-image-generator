@@ -15,6 +15,13 @@ let imageholder = null;
 
 let data;
 let step=1 ;
+
+count_api_elem = document.getElementById("countapi");
+console.log(count_api_elem.innerText);
+
+fetch('https://api.countapi.xyz/hit/ceig/cc9ab052-9e8e-4c8b-bd70-86aafc79433d')
+  .then(response => response.json())
+  .then(data => count_api_elem.innerText = data.value);
 function stepChange(){
     if(text.value){
         data = text.value;
