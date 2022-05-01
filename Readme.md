@@ -11,7 +11,7 @@
 
 <br>
 
-<img src="./img/ss1.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:15px;"/>
-<img src="./img/ss2.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:15px;"/>
-<img src="./img/ss3.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:15px;"/>
-<img src="./img/ss4.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:15px;"/>
+<img src="./img/ss1.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:25px;border-style:solid;border-color:white;border-width:7px"/>
+<img src="./img/ss2.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:25px;border-style:solid;border-color:white;border-width:7px"/>
+<img src="./img/ss3.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:25px;border-style:solid;border-color:white;border-width:7px"/>
+<img src="./img/ss4.png" alt="drawing" height="800" width="350" style="margin:8px;border-radius:25px;border-style:solid;border-color:white;border-width:7px"/>
