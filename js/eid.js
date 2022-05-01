@@ -10,6 +10,8 @@ const fourth = document.getElementById("fourth");
 const nextButton = document.getElementById("nextButton");
 const downloadButton = document.getElementById("downloadButton");
 let myCanvasPng = null;
+let quoteholder = null ;
+let imageholder = null;
 
 let data;
 let step=1 ;
@@ -93,7 +95,41 @@ function setupCanvas(canvas) {
     ctx.scale(dpr, dpr);
     return ctx;
 }
+function selectquote(elem){
+    if(quoteholder == null ){
+        quoteholder = document.getElementById(elem.className);
+        quoteholder.style.backgroundColor = "#3FFF61";
+        quoteholder.style.boxShadow = "0 12px 16px 0 rgba(93, 90, 90, 0.3),0 17px 50px 0 rgba(86, 86, 86, 0.3)";
+        quoteholder.style.transform = "scale(1.05)";
+        nextButton.disabled=false;
+    }else{
+        quoteholder.style.boxShadow = "none";
+        quoteholder.style.transform = "none";
+        quoteholder.style.backgroundColor= "white";
+        quoteholder = document.getElementById(elem.className);
+        quoteholder.style.backgroundColor = "#3FFF61";
+        quoteholder.style.boxShadow = "0 12px 16px 0 rgba(93, 90, 90, 0.3),0 17px 50px 0 rgba(86, 86, 86, 0.3)";
+        quoteholder.style.transform = "scale(1.05)";
+    }
 
+}
+function selectimage(elem){
+    if(imageholder == null){
+        imageholder = document.getElementById(elem.className);
+        imageholder.style.backgroundColor = "#3FFF61";
+        imageholder.style.boxShadow = "0 12px 16px 0 rgba(93, 90, 90, 0.3),0 17px 50px 0 rgba(86, 86, 86, 0.3)";
+        imageholder.style.transform = "scale(1.05)";
+        nextButton.disabled=false;
+    }else{
+        imageholder.style.boxShadow = "none";
+        imageholder.style.transform = "none";
+        imageholder.style.backgroundColor= "white";
+        imageholder = document.getElementById(elem.className);
+        imageholder.style.backgroundColor = "#3FFF61";
+        imageholder.style.boxShadow = "0 12px 16px 0 rgba(93, 90, 90, 0.3),0 17px 50px 0 rgba(86, 86, 86, 0.3)";
+        imageholder.style.transform = "scale(1.05)";
+    }
+}
 function generateimage(source, para){
     myCanvasPng=document.getElementById("myCanvas");
     let ctx = setupCanvas(myCanvasPng);
@@ -108,13 +144,15 @@ function generateimage(source, para){
     ctx.fillStyle="black" ;
     ctx.drawImage(image,0,0);
 
-    let str = ".para"+para;
+    let str = "."+para;
+    //console.log("para details"+str);
     let textElem = document.querySelectorAll(str);
+    //console.log(textElem);
     let cntx = 20;
     let cnty = 50 ;
     for(let i=0;i<textElem.length;i++){
        let temp =  textElem[i].innerText ;
-       //console.log("in for texElemloop"+temp);
+    //console.log("in for texElemloop"+temp);
        cnty = cnty + 30 ; 
        ctx.fillText(temp,cntx,cnty) ;
     }
@@ -133,17 +171,18 @@ function generateimage(source, para){
 
 }
 function finalProcess(){
-    let getpara = document.querySelector('input[name="para"]:checked');
-    let getimage = document.querySelector('input[name="img"]:checked');
+    //let getpara = document.querySelector('input[name="para"]:checked');
+   // let getpara = quoteholder;
+    //let getimage = document.querySelector('input[name="img"]:checked');
     
     //console.log(getimage.value);
     //console.log(getpara.value);
-    let x = getimage.value;
-    let imgDesc = document.getElementById(x);
+    let x = "."+imageholder.id;
+    let imgDesc = document.querySelector(x);
     let pass = imgDesc.src ;
     let ht = imgDesc.height;
     let wd = imgDesc.width ;
-    generateimage(pass,getpara.value);
+    generateimage(pass,quoteholder.id);
     
 }
 
